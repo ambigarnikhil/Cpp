@@ -178,3 +178,34 @@ int main()
 }
 //op:8
 */
+
+/*
+#include<unordered_map>
+int main()
+{
+    string s="I want to play circket";
+    string temp="";
+    int j=0;
+    unordered_map<int,string> omap;
+    int len=s.length();
+    for(int i=0;i<len;i++)
+    {
+        if(s[i]==' ')
+        {
+            omap[j++]=temp;
+            temp="";
+        }
+        else
+        {
+            temp.push_back(s[i]);
+        }
+    }
+    omap[j]=temp;
+    while(j>=0)
+    {
+        cout<<omap[j]<<" ";
+        j--;
+    }
+}
+//op:circket play to want I
+*/
