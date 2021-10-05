@@ -209,3 +209,84 @@ int main()
 }
 //op:circket play to want I
 */
+
+/*
+int anagram(string s1,string s2)
+{
+    int len1=s1.length();
+    int len2=s2.length();
+    if(len1!=len2)
+    {
+        return 0;
+    }
+    else
+    {
+        sort(s1.begin(),s1.end());
+        sort(s2.begin(),s2.end());
+        
+        for(int i=0;i<len1;i++)
+        {
+            if(s1[i]==s2[i])
+            {
+                continue ;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        return 1;
+        
+       if(s1==s2)
+       {
+           return 1;
+       }
+       else{
+           return 0;
+       }
+    }
+}
+
+int main()
+{
+    string s1;
+    string s2;
+    getline(cin,s1);
+    getline(cin,s2);
+    int c = anagram(s1,s2); 
+    cout<<c<<endl;
+}
+*/
+
+/*
+void pattern(int *n)
+{
+    for(int i=1;i<=(*n);i++)
+    {
+        for(int j=1;j<=i;j++)
+        {
+            cout<<j<<" ";
+        }
+        cout<<endl;
+    }
+}
+int main()
+{
+    int n;
+    cout<<"enter the number:";
+    cin>>n;
+    pattern(&n);
+}
+*/
+
+/*
+int main()
+{
+    double a;
+    cin>>a;
+    int temp=a;
+    cout<<temp<<" ";
+    a=a-temp;
+    cout<<a;
+}
+*/
