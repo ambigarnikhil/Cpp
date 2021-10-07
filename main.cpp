@@ -290,3 +290,55 @@ int main()
     cout<<a;
 }
 */
+
+/*
+int main()
+{
+    int a[5][5]={11,3,5,6,9,
+                12,4,7,8,10,
+                10,5,6,9,11,
+                8,6,4,7,2,
+                15,10,11,20,25};
+    int row[5],column[5];
+    int x=0;
+    for(int i=0;i<5;i++)
+    {
+        int max=a[i][0];
+        for(int j=0;j<5;j++)
+        {
+            if(a[i][j]>=max)
+            {
+                row[x]=j+1;
+                temp=a[i][j];
+            }
+        }
+        x++;
+    }
+    int y=0;
+    for(int j=0;j<5;j++)
+    {
+        int temp=a[0][j];
+        for(int i=0;i<5;i++)
+        {
+            if(a[i][j]<=temp)
+            {
+                column[y]=i+1;
+                temp=a[i][j];
+            }
+        }
+        y++;
+    }
+    for(int i=0;i<5;i++)
+    {
+        cout<<row[i]<<" ";
+    }
+    cout<<endl;
+    for(int i=0;i<5;i++)
+    {
+        cout<<column[i]<<" ";
+    }
+    cout<<endl;
+    
+}
+*/
+
