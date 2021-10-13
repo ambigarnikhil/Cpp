@@ -342,3 +342,130 @@ int main()
 }
 */
 
+/*
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n,k;
+    cin>>n>>k;
+    int count=0;
+    for(int i=1;i<=n;i++)
+    {
+        //cout<<i<<"  "<<i%k<<endl;
+        if(i>9 && i%k!=0)
+        {
+            int temp=0;
+            int c=i;
+            while(c>0)
+            {
+                int a=c%10;
+                temp+=a;
+                c=c/10;
+            }
+            if(temp%k==0)
+            {
+                count++;
+            }
+        }
+    }
+    cout<<count;
+}
+/*
+/*
+if(i>9 && i%k!=0)
+        {
+            int temp=0;
+            while(i>0)
+            {
+                int a=i%10;
+                temp+=a;
+                i=i/10;
+            }
+            if(temp%k==0)
+            {
+                count++;
+            }
+        }
+        */
+/*
+int main()
+{
+    int n=1215598;
+    int temp=n;
+    int len=0;
+    while(temp>0)
+    {
+        len++;
+        temp=temp/10;
+    }
+    cout<<"len= "<<len<<endl;
+    int count=0;
+    int i=1;
+    while(n>0)
+    {
+        int a=n;
+        cout<<a<<endl;
+        while(a>0)
+        {
+            if(a%11==0)
+            {
+                count++;
+            }
+            a=a/10;
+        }
+        n=n-pow(10,len-i);
+        i++;
+    }
+    cout<<count;
+}
+*/
+
+
+/*
+#include <iostream>
+#include<bits/stdc++.h>
+#include<cmath>
+
+using namespace std;
+
+int main()
+{
+    int n=1215598;
+    int temp=n;
+    int len=0;
+    while(temp>0)
+    {
+        len++;
+        temp=temp/10;
+    }
+    cout<<"len= "<<len<<endl;
+    cout<<n<<endl;
+    int count=0;
+    int i=1;
+    while(n>0)
+    {
+        int a=n,c=n;
+        cout<<a<<endl;
+        while(a>0)
+        {
+            if(a%11==0)
+            {
+                count++;
+            }
+            a=a/10;
+        }
+        int b=pow(10,len-i);
+        while(c>0 && c<10)
+        {
+            c=c/10;
+        }
+        n=n-(b*c);
+        i++;
+    }
+    cout<<count;
+
+}
+*/
