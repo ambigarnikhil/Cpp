@@ -469,3 +469,90 @@ int main()
 
 }
 */
+/*
+#include<bits/stdc++.h>
+#include<iostream>
+#include<string>
+#include<unordered_map>
+using namespace std;
+int main()
+{
+    string s="i love my india";
+    string a="";
+    unordered_map<int,string> omap;
+    int x=0;
+    for(int i=0;s[i]!='\0';i++)
+    {
+        if(s[i]==' ')
+        {
+            omap[x++]=a;
+            a="";
+        }
+        else{
+            a+=s[i];
+        }
+    }
+    omap[x]=a;
+    while(x>=0)
+    {
+        cout<<omap[x]<<" ";
+        x--;
+    }
+}
+*/
+
+/*
+#include<bits/stdc++.h>
+#include<cstring>
+#include<iostream>
+using namespace std;
+int main()
+{
+    char s1[10];
+    scanf("%[^\n]",s1);
+    strlwr(s1);
+    int len=strlen(s1);
+    int i=0,j=len-1;
+    while(i<j)
+    {
+        if(s1[i]!=s1[j])
+        {
+            cout<<"Not a palindrome\n";
+            exit(1);
+        }
+        i++;
+        j--;
+    }
+    cout<<"Palindrome";
+    
+}
+*/
+
+#include<bits/stdc++.h>
+#include<iostream>
+#include<string>
+using namespace std;
+
+/*
+int fibonacci(int n)
+{
+    if(n==0)
+    {
+        return 0;
+    }
+    else if(n==1)
+    {
+        return 1;
+    }
+    else{
+        return fibonacci(n-1)+fibonacci(n-2);
+    }
+}
+int main()
+{
+    int n;
+    cin>>n;
+    cout<<fibonacci(n);
+
+}
+*/
