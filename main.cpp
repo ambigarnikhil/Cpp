@@ -556,3 +556,169 @@ int main()
 
 }
 */
+/*
+int factorial(int n)
+{
+    if(n==0)
+    {
+        return 1;
+    }
+    else
+    {
+        return n*factorial(n-1);
+    }
+}
+int main()
+{
+    int n=5;
+    cout<<factorial(5);
+}
+*/
+/*
+int power(int n, int i)
+{
+    if(i==1)
+    {
+        return n;
+    }
+    else
+    {
+        return n*power(n,i-1);
+    }
+}
+int main()
+{
+    int n=3;
+    int i=4;
+    cout<<power(3,4);
+}
+*/
+/*
+int main()
+{
+    int n=1234;
+    int a=0;
+    int temp=n;
+    while(temp>0)
+    {
+        int b;
+        b=temp%10;
+        a=a*10+b;
+        temp=temp/10;
+    }
+    cout<<a;
+}
+*/
+
+/*
+int main()
+{
+    string s="Move#Hash#to#Front";
+    int len =s.length();
+    string temp="";
+    int i, count=0;
+    while(s[i]!='\0')
+    {
+        if(s[i]=='#')
+        {
+            count++;
+        }
+        i++;
+    }
+    while(count>0)
+    {
+        temp+='#';
+        count--;
+    }
+    for(int i=0;i<len;i++)
+    {
+        if(s[i]!='#')
+        {   
+            temp+=s[i];  
+        }
+    }
+    cout<<temp;
+}
+*/
+
+/*
+//aabbbbeeeeffggg
+//a2b4e4f2g3
+int main()
+{
+    //string s="aabbbbeeeeffggg";
+    string s="abbccccc";
+    unordered_map<char,int> omap;
+    int i=0;
+    while(s[i]!='\0')
+    {
+        omap[s[i]]+=1;
+        i++;
+    }
+    int j=0;
+    while(s[j]!='\0')
+    {
+        if(s[j]!=s[j+1])
+        {
+            if(omap[s[j]]==1)
+            {
+                cout<<s[j];
+            }
+            else{
+                cout<<s[j]<<omap[s[j]];
+            }
+            
+        }
+        j++;
+    }
+}
+*/
+
+/*
+int main()
+{
+    int a[10]={1,2,3,3,4,1,4,5,1,2};
+    int len=sizeof(a)/sizeof(a[0]);
+    unordered_map<int,int> omap;
+    for(int i=0;i<len;i++)
+    {
+        omap[a[i]]+=1;
+    }
+    sort(a,a+len);
+    for(int i=0;i<len;i++)
+    {
+        if(a[i]!=a[i+1])
+        {
+            cout<<a[i]<<" occurs "<<omap[a[i]]<<" times"<<endl;
+        }
+    }
+}
+*/
+
+int main()
+{
+    int n;
+    cin>>n;
+    int a[n][2];
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<2;j++)
+        {
+            cin>>a[i][j];
+        }
+    }
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<2;j++)
+        {
+            cout<<a[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    for(int i=0;i<n;i++)
+    {
+        int sum=0;
+        sum=a[i][0]*4+a[i][1]*2;
+        cout<<sum<<endl;
+    }
+}
