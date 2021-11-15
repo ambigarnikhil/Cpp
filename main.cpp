@@ -695,6 +695,7 @@ int main()
 }
 */
 
+/*
 int main()
 {
     int n;
@@ -722,3 +723,6 @@ int main()
         cout<<sum<<endl;
     }
 }
+*/
+
+
