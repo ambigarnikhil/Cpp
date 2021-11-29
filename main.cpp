@@ -725,4 +725,323 @@ int main()
 }
 */
 
+#include<bits/stdc++.h>
+#include<iostream>
+#include<string>
+using namespace std;
+/*
+int main()
+{
+    string a="nikhil";
+    int len= a.length();
+    for(int i=0;i<len;i++)
+    {
+        for(int j=0;j<=len-i;j++)
+        {
+            cout << a.substr(i, j) << endl;
+        }
+    }
+}
+*/
+/*
+int main()
+{
+    string s="lmnop";
+    string temp=s;
+    int i=0,j=s.length()-1;
+    while(i<j)
+    {
+        char a=temp[i];
+        temp[i]=temp[j];
+        temp[j]=a;
+        i++;
+        j--;
+    }
+    cout<<temp;
+    vector<int> m;
+    for(int i=0;i<s.length()-1;i++)
+    {
+        int a1=s[i+1];
+        int a2=s[i];
+        m[i]= a2-a1; 
+    }
+    for(int i=0;i<s.length()-1;i++)
+    {
+        cout<<m[i]; 
+    }
+}
+*/
+/*
+int main()
+{
 
+    string s="nikhil";
+    stack<int> nik;
+    for(int i=0;i<s.length();i++)
+    {
+        cout<<nik.top()<<endl;
+        if(i==0)
+        {
+            nik.push(s[i]);
+        }
+        else
+        {
+            if(s[i]==nik.top())
+            {
+                nik.pop();
+            }
+            else
+            {
+                nik.push(s[i]);
+            }
+        }
+    }
+}
+*/
+
+
+#include<iostream>
+#include<algorithm>
+#include<vector>
+#include<iostream>
+
+using namespace std;
+/*
+void display(vector<int> temp)
+{
+    for(int i=0;i<temp.size();i++)
+    {
+        cout<<temp[i]<<" ";
+    }
+    cout<<endl;
+}
+int binarysearch(vector<int> temp,int start,int end,int n)
+{
+    if(end>=start)
+    {
+        int mid=(start+end)/2;
+        if(temp[mid]==n)
+        {
+            return mid;
+        }
+        else{
+
+            if(n>temp[mid])
+            {
+                return binarysearch(temp,mid+1,end,n);
+            }
+            return binarysearch(temp,start,mid-1,n);
+        }
+    }
+    return -1;
+
+}
+int main()
+{
+    vector<int> temp;
+    for(int i=50;i>=10;i-=10)
+    {
+        temp.push_back(i);
+    }
+    display(temp);
+    sort(temp.begin(),temp.end());
+    display(temp);
+    int n;
+    cout<<"Enter the element to search:\n";
+    cin>>n;
+    cout<<binarysearch(temp,0,4,);
+
+}
+*/
+/*
+#include <map>
+void display(vector<int> temp)
+{
+    for(int i=0;i<temp.size();i++)
+    {
+        cout<<temp[i]<<" ";
+    }
+    cout<<endl;
+}
+int main()
+{
+    vector<int> a;
+    a.push_back(9);
+    a.push_back(8);
+    a.push_back(7);
+    a.push_back(4);
+    a.push_back(7);
+    a.push_back(5);
+    a.push_back(5);
+    a.push_back(2);
+    a.push_back(1);
+    a.push_back(1);
+    map<int, int> omap;
+    for(int i=0;i<a.size();i++)
+    {
+        omap[a[i]]++;
+    }
+    display(a);
+    a.clear();
+    display(a);
+    map<int,int> ::iterator it;
+    for(it=omap.begin();it!=omap.end();it++)
+    {
+        for(int i=0;i<it->second;i++)
+        {
+            //cout<<it->first<<" ";
+            a.push_back(it->first);
+        }
+    }
+    display(a);
+}
+*/
+
+/*
+void display(int **arr,int m,int n)
+{
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            cout<<arr[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+}
+int diagonalsum(int **arr,int m)
+{
+    int sum=0;
+    for(int i=0;i<m;i++)
+    {
+        sum+=arr[i][i];
+    }
+    return sum;
+}
+int main()
+{
+    int m,n;
+    cout<<"Enter row value:\n";
+    cin>>m;
+    cout<<"Enter column value:\n";
+    cin>>n;
+    int **arr;
+    arr=(int **)malloc(m*sizeof(int *));
+    for(int i=0;i<m;i++)
+    {
+        arr[i]=(int *)malloc(n*sizeof(int));
+    }
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            cin>>arr[i][j];
+        }
+    }
+    display(arr,m,n);
+    cout<<endl;
+    if(m==n)
+    {
+        cout<<diagonalsum(arr,m);
+    }
+    else
+    {
+        if(m<n)
+        {
+            int k=n;
+            int **temp;
+            temp=(int **)malloc(k*sizeof(int *));
+            for(int i=0;i<k;i++)
+            {
+                temp[i]=(int *)malloc(k*sizeof(int));
+            }
+            for(int i=0;i<m;i++)
+            {
+                for(int j=0;j<n;j++)
+                {
+                    temp[i][j]=arr[i][j];
+                }
+            }
+            for(int i=m;i<k;i++)
+            {
+                for(int j=0;j<n;j++)
+                {
+                    temp[i][j]=1;
+                }
+            }
+            display(temp,k,k);
+            cout<<diagonalsum(temp,k);
+        }
+        else
+        {
+            int k=m;
+            int **temp;
+            temp=(int **)malloc(k*sizeof(int *));
+            for(int i=0;i<k;i++)
+            {
+                temp[i]=(int *)malloc(k*sizeof(int));
+            }
+            for(int i=0;i<m;i++)
+            {
+                for(int j=0;j<n;j++)
+                {
+                    temp[i][j]=arr[i][j];
+                }
+            }
+            for(int i=0;i<m;i++)
+            {
+                for(int j=n;j<k;j++)
+                {
+                    temp[i][j]=1;
+                }
+            }
+            display(temp,k,k);
+            cout<<diagonalsum(temp,k);
+        }
+    }
+}
+*/
+/*
+int lem(int m,int n)
+{
+    if(m==n)
+        return m;
+    else if(m<n)
+        return m;
+    else
+        return n;
+}
+int main()
+{
+    int m,n;
+    cin>>m>>n;
+    int arr[m][n];
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            cin>>arr[i][j];
+        }
+    }
+    int a=lem(m,n);
+    int sum=0;
+    for(int i=0;i<a;i++)
+        sum+=arr[i][i];
+    int k= m>n ? (m-n):(n-m);
+    while(k)
+    {
+        sum+=1;
+        k--;
+    }
+    cout<<"sum:"<<sum<<endl;
+}
+*/
+
+int main()
+{
+    int a=5;
+    int pos=2;
+    int i=1<<pos;
+    //0101 & 0100
+    cout<<a&i;
+}
