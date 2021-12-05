@@ -1037,6 +1037,7 @@ int main()
 }
 */
 
+/*
 int main()
 {
     int a=5;
@@ -1045,3 +1046,104 @@ int main()
     //0101 & 0100
     cout<<a&i;
 }
+*/
+
+//Recursion Starts:
+
+
+#include<iostream>
+#include<bits/stdc++.h>
+#include<algorithm>
+/*
+//Print 1 to n.
+void print(int n)
+{
+    if(n>0)
+    {
+        print(n-1);
+        cout<<n<<" ";
+    }
+    
+}
+int main()
+{
+    int n=7;
+    print(n);
+}
+*/
+/*
+ //print n to 1
+void print(int n)
+{
+    if(n>0)
+    {
+        cout<<n<<" ";
+        print(n-1); 
+    }
+    
+}
+int main()
+{
+    int n=7;
+    print(n);
+}
+*/
+/*
+//Factorial
+int factorial(int n)
+{
+    if(n==1)
+    {
+        return 1;
+    }
+    else{
+        return n*factorial(n-1);
+    }
+
+}
+int main()
+{
+    cout<<factorial(5);
+}
+*/
+/*
+//Fibonacci
+int fibonacci(int n)
+{
+    if(n==1 || n==2)
+    {
+        return 1;
+    }
+    else{
+        return fibonacci(n-1)+fibonacci(n-2);
+    }
+}
+int main()
+{
+    cout<<fibonacci(10);
+}
+*/
+
+/*
+//Fibonacci series:
+int fibonacci(int n)
+{
+    if(n==1 || n==2)
+    {
+        return 1;
+    }
+    else{
+        return fibonacci(n-1)+fibonacci(n-2);
+    }
+}
+int main()
+{
+    int n=10;
+    int i=1;
+    while(i<=10)
+    {
+        cout<<fibonacci(i)<<" ";
+        i++;
+    }
+}
+*/
