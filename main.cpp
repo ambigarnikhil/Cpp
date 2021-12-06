@@ -1147,3 +1147,102 @@ int main()
     }
 }
 */
+
+/*
+struct node{
+    int data;
+    struct node *link;
+};
+struct node *root=NULL;
+void insert(int temp)
+{
+    struct node *p;
+    p=(struct node *)malloc(sizeof(node));
+    p->data=temp;
+    p->link=NULL;
+    if(root==NULL)
+    {
+        root=p;
+    }
+    else{
+        struct node *q=root;
+        while(q->link!=NULL)
+        {
+            q=q->link;
+        }
+        q->link=p;
+    }
+}
+void display(struct node *root)
+{
+    if(root==NULL)
+        cout<<"Empty LL"<<endl;
+    else{
+        struct node *p=root;
+        while(p!=NULL)
+        {
+            cout<<p->data<<"->";
+            p=p->link;
+        }
+    }
+
+}
+int length(struct node *root)
+{
+    int len=0;
+    if(root==NULL)
+        return 0;
+    else{
+        struct node *p=root;
+        while(p!=NULL)
+        {
+            len++;
+            p=p->link;
+        }
+    }
+    return len;
+
+}
+int main()
+{
+    cout<<length(root)<<endl;
+    display(root);
+    insert(5);
+    insert(6);
+    insert(7);
+    display(root);
+    cout<<endl;
+    cout<<length(root);
+
+}
+*/
+#include<string>
+vector<string> substring(string ip,string op)
+{
+    vector<string> temp;
+    if(!ip.length())
+    {
+        //cout<<op<<" ";
+        temp.push_back(op);
+        return temp; 
+    }
+    string op1=op;
+    string op2=op;
+    op2.push_back(ip[0]);
+    ip.erase(ip.begin()+0);
+    substring(ip,op1);
+    substring(ip,op2);
+    return temp;
+}
+
+int main()
+{
+    string ip;
+    cin>>ip;
+    string op="";
+    vector<string> a = substring(ip,op);
+    for(int i=0;i<a.size();i++)
+    {
+        cout<<a[i]<<" ";
+    }
+}
