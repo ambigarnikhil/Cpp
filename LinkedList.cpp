@@ -108,7 +108,28 @@ void deleteatloc(int loc)
     q->link=NULL;
     free(q);
 }
-
+void reverse(int len)
+{
+    struct node *p=root;
+    int k=0,i=0;
+    int j=len-1;
+    while(k<len/2)
+    {
+        struct node *q=root;
+        while(i<j)
+        {
+            q=q->link;
+            i++;
+        }
+        int temp=p->data;
+        p->data=q->data;
+        q->data=temp;
+        k++;
+        p=p->link;
+        i=0;j--;
+    }
+}
+int len;
 int main()
 {
     cout<<"Linked List Operations"<<endl;
@@ -121,7 +142,8 @@ int main()
         cout<<"4.Length\n";
         cout<<"5.Delete at beginining\n";
         cout<<"6.Delete at given location\n";
-        cout<<"7.Exit\n";
+        cout<<"7.Reverse\n";
+        cout<<"8.Exit\n";
         cout<<"Enter Your operation:"<<endl;
         cin>>ch;
         switch(ch)
@@ -149,6 +171,7 @@ int main()
                     display(root);
                     break;
             case 4: cout<<"The length of the linked List is: "<<length(root)<<endl;
+                    len=length(root);
                     break;
             case 5: deleteatbegin();
                     display(root);
@@ -158,7 +181,11 @@ int main()
                     cin>>x;
                     deleteatloc(x);
                     break;
-            case 7: exit(1);
+            case 7: display(root);
+                    reverse(len);
+                    display(root);
+                    break;
+            case 8: exit(1);
 
             default: cout<<"Enter the valid choice"<<endl;
 

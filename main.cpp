@@ -1234,7 +1234,6 @@ vector<string> substring(string ip,string op)
     substring(ip,op2);
     return temp;
 }
-
 int main()
 {
     string ip;
