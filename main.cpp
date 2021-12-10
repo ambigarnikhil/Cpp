@@ -1216,6 +1216,8 @@ int main()
 
 }
 */
+
+/*
 #include<string>
 vector<string> substring(string ip,string op)
 {
@@ -1245,3 +1247,4 @@ int main()
         cout<<a[i]<<" ";
     }
 }
+*/
